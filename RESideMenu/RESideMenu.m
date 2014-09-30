@@ -27,6 +27,10 @@
 #import "UIViewController+RESideMenu.h"
 #import "RECommonFunctions.h"
 
+#ifndef NSFoundationVersionNumber_iOS_7_1 
+#define NSFoundationVersionNumber_iOS_7_1 1047.25
+#endif
+
 @interface RESideMenu ()
 
 @property (strong, readwrite, nonatomic) UIImageView *backgroundImageView;

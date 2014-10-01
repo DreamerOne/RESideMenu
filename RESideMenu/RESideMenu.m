@@ -170,7 +170,10 @@
         } completion:^(BOOL finished) {
             [self hideViewController:self.contentViewController];
             [contentViewController didMoveToParentViewController:self];
+            
+            [self willChangeValueForKey:@"contentViewController"];
             _contentViewController = contentViewController;
+            [self didChangeValueForKey:@"contentViewController"];
 
             [self statusBarNeedsAppearanceUpdate];
             [self updateContentViewShadow];

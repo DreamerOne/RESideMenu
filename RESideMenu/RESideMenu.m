@@ -621,7 +621,7 @@
         if (point.x < 0) {
             point.x = MAX(point.x, -[UIScreen mainScreen].bounds.size.height);
         } else {
-            point.x = MIN(point.x, [UIScreen mainScreen].bounds.size.height);
+            point.x = MIN(point.x, self.contentViewInLandscapeOffsetCenterX);
         }
         [recognizer setTranslation:point inView:self.view];
         

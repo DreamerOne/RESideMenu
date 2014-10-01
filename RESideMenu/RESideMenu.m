@@ -577,7 +577,7 @@
         if (self.visible) {
             delta = self.originalPoint.x != 0 ? (point.x + self.originalPoint.x) / self.originalPoint.x : 0;
         } else {
-            delta = point.x / self.view.frame.size.width;
+            delta = point.x / self.contentViewInLandscapeOffsetCenterX;
         }
         delta = MIN(fabs(delta), 1.6);
         
